@@ -24,7 +24,7 @@ export function createObservable<T>(promiseFactory: (...args: any[]) => AxiosPro
       subscriber.next(response);
       subscriber.complete();
     })
-        .catch(error => subscriber.error(error));
+      .catch(error => subscriber.error(error));
   });
 
   const _subscribe = observable.subscribe.bind(observable);
